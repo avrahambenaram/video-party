@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    width: 99.9vw;
+    height: 99.9vh;
+    background: gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video {
+    height: auto;
+    max-height: 100%;
+}
+input, button, textarea {
+    cursor: pointer;
+}
+input {
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background: darkgray;
+    color: #fff;
+    border: 1px solid lightgray;
+}
+input::placeholder {
+    color: lightgray;
+}
+button {
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background: darkgray;
+    color: #fff;
+    border: 1px solid lightgray;
+}
+.chat  {
+    border: 1px solid gray;
+
+    display: flex;
+    flex-direction: column;
+}
+.chat-container {
+    width: 100%;
+    height: 90%;
+    color: #fff;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.msg {
+    width: 100%;
+    word-break: break-all;
+}
+.interface {
+    width: 100%;
+    height: 10%;
+    background: darkgray;
+    color: #fff;
+    border: 1px solid lightgray;
+
+    display: flex;
+    align-items: center;
+}
+.message {
+    width: 85%;
+    height: 75%;
+    border: none;
+    background: none;
+}
+.send {
+    width: 15%;
+    height: 100%;
+    border: none;
+    background: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 5px;
+    }
+    button {
+        margin-top: 5px;
+    }
+    video {
+        width: 100%;
+        height: 25%;
+    }
+    .chat {
+        width: 100%;
+        height: 75%;
+    }
+}
+@media (min-width: 1001px) {
+    video {
+        width: 75%;
+    }
+    .chat {
+        flex-grow: 1;
+        height: 100%;
+    }
+}
